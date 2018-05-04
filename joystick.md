@@ -19,4 +19,4 @@ joystick 模块用来管理电脑上游戏杆类的设备。游戏杆类的设�
 
 以 PS4 次世代游戏手柄为例，本文出现的名称含义如下:
 
-![PS4 次世代游戏手柄](.\77_400_300.jpg)
+![PS4 次世代游戏手柄](https://raw.githubusercontent.com/LonelySteve/PygameDocs/master/77_400_300.jpg)
