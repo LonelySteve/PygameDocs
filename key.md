@@ -26,7 +26,7 @@ key 属性的值是一个数字，为了方便使用，Pygame 将这些数字定
 |:--:|:--:|:--:|
 |K_BACKSPACE|\b|退格键（Backspace）|
 |K_TAB|\t|制表键（Tab）|
-|K_CLEAR||清楚键（Clear）|
+|K_CLEAR||清除键（Clear）|
 |K_RETURN|\r|回车键（Enter）|
 |K_PAUSE||暂停键（Pause）|
 |K_ESCAPE|^[|退出键（Escape）|
@@ -94,7 +94,7 @@ key 属性的值是一个数字，为了方便使用，Pygame 将这些数字定
 |K_x|x|x|
 |K_y|y|y|
 |K_z|z|z|
-|K_DELETE|删除键（delete）|
+|K_DELETE||删除键（delete）|
 |K_KP0|0|（小键盘）|
 |K_KP1|1|（小键盘）|
 |K_KP2|2|（小键盘）|
