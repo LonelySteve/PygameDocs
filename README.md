@@ -36,6 +36,7 @@ Pygame的中文文档实在难找，即使是这份文档，也不全，但是�
 |[Rect](./rect.md)|Rect 是用于存储矩形坐标的 Pygame 对象|
 |[sndarray](./sndarray.md)|Pygame 中访问音频采样数据的模块。|
 |[version](./version.md)|包含 Pygame 版本信息的小模块|
+|[mixer](./mixer.md)|用于加载和播放声音的 Pygame 模块|
 
 ## 版权申明
 
@@ -53,7 +54,6 @@ Pygame的中文文档实在难找，即使是这份文档，也不全，但是�
 + freetype
 + math
 + midi
-+ mixer
 + PixelArray
 + pixelcopy
 + scrap
