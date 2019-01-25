@@ -12,7 +12,7 @@
 
 ## 属性详解
 
-```pygame.version.ver```
+`pygame.version.ver`
 
 string 类型的版本号。
 
@@ -20,7 +20,7 @@ ver = '1.2'
 
 这是用 string 类型表示的版本号。它也可以包含更详细的版本号，例如：'1.5.2'
 
-```pygame.version.vernum```
+`pygame.version.vernum`
 
 用元组来表示版本。
 
@@ -36,7 +36,7 @@ if pygame.version.vernum < (1, 5):
     disable_advanced_features = True
 ```
 
-```pygame.version.rev```
+`pygame.version.rev`
 
 库版本构建号。
 

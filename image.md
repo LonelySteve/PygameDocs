@@ -41,7 +41,7 @@ Image 是 Pygame 相当依赖的一个模块，支持载入的图像格式如下
 
 ### 函数详解
 
-```pygame.image.load()```
+`pygame.image.load()`
 
 从文件加载新图片。
 
@@ -65,7 +65,7 @@ Pygame 将自动判断图像的格式（比如 GIF 或位图）并创建一个�
 asurf = pygame.image.load(os.path.join('data', 'FishC.png'))
 ```
 
-```pygame.image.save()```
+`pygame.image.save()`
 
 将图像保存到磁盘上。
 
@@ -75,7 +75,7 @@ save(Surface, filename) -> None
 
 保存为 PNG 和 JPEG 格式是 Pygame 1.8 新增的。
 
-```pygame.image.get_extended()```
+`pygame.image.get_extended()`
 
 检测是否支持载入扩展的图像格式。
 
@@ -83,7 +83,7 @@ get_extended() -> bool
 
 如果 Pygame 支持上述所有的扩展图像格式，则返回 True。
 
-```pygame.image.tostring()```
+`pygame.image.tostring()`
 
 将图像转换为字符串描述。
 
@@ -103,7 +103,7 @@ format 参数可以是下表中任何一个字符串。注意：只有 8 位的 
 |RGBA_PREMULT|32 位图像，通过 alpha 通道缩放|
 |ARGB_PREMULT|32 位图像，通过 alpha 通道缩放，并将 alpha 放在前边|
 
-```pygame.image.fromstring()```
+`pygame.image.fromstring()`
 
 将字符串描述转换为图像。
 
@@ -114,7 +114,7 @@ size 和 format 参数指定的数据需要跟字符串描述相符，否则将�
 
 更快地将图片转换到 Pygame，请参考 pygame.image.frombuffer() 函数。
 
-```pygame.image.frombuffer()```
+`pygame.image.frombuffer()`
 
 创建一个与字符串描述共享数据的 Surface 对象。
 

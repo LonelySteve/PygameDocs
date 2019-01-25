@@ -30,7 +30,7 @@ Pygame 中播放音乐的模块和 pygame.mixer 模块是密切联系的。使�
 
 ## 函数详解
 
-```pygame.mixer.music.load()```
+`pygame.mixer.music.load()`
 
 载入一个音乐文件用于播放。
 
@@ -39,7 +39,7 @@ load(object) -> None
 
 该函数将会载入一个音乐文件名或者文件对象，并且准备播放。如果已经有音乐流正在播放，该音乐流将被停止。另外，函数不会开始播放音乐。
 
-```pygame.mixer.music.play()```
+`pygame.mixer.music.play()`
 
 开始播放音乐流。
 
@@ -51,7 +51,7 @@ loops 参数控制重复播放的次数，例如 play(5) 意味着被载入的�
 
 start 参数控制音乐从哪里开始播放。开始的位置取决于音乐的格式。MP3 和 OGG 使用时间表示播放位置（以秒为单位）。MOD使用模式顺序编号表示播放位置。如果音乐文件无法设置开始位置，则传递了start参数后会产生一个NotImplementedError 错误。
 
-```pygame.mixer.music.rewind()```
+`pygame.mixer.music.rewind()`
 
 重新开始播放音乐。
 
@@ -59,7 +59,7 @@ rewind() -> None
 
 从文件开头开始重新播放音乐。
 
-```pygame.mixer.music.stop()```
+`pygame.mixer.music.stop()`
 
 结束音乐播放。
 
@@ -67,7 +67,7 @@ stop() -> None
 
 如果音乐正在播放则立即结束播放。
 
-```pygame.mixer.music.pause()```
+`pygame.mixer.music.pause()`
 
 暂停音乐流的播放。
 
@@ -75,7 +75,7 @@ pause() -> None
 
 通过调用 pygame.mixer.music.unpause() 函数继续播放音乐。
 
-```pygame.mixer.music.unpause()```
+`pygame.mixer.music.unpause()`
 
 恢复音乐播放。
 
@@ -83,7 +83,7 @@ unpause() -> None
 
 在播放暂停后使用该函数可以继续音乐流的播放。
 
-```pygame.mixer.music.fadeout()```
+`pygame.mixer.music.fadeout()`
 
 淡出的效果结束音乐播放。
 
@@ -93,7 +93,7 @@ fadeout(time) -> None
 
 注意：该函数在调用后会一直处于阻塞状态，直到音乐已经淡出。
 
-```pygame.mixer.music.set_volume()```
+`pygame.mixer.music.set_volume()`
 
 设置音量。
 
@@ -103,7 +103,7 @@ set_volume(value) -> None
 
 value 参数值范围为 0.0~1.0。当新的音乐文件被载入，音量会被重置。
 
-```pygame.mixer.music.get_volume()```
+`pygame.mixer.music.get_volume()`
 
 获取音量。
 
@@ -111,7 +111,7 @@ get_volume() -> value
 
 返回正在播放的音乐的音量（此音量应该是调音器音量，注意与其他音量参数区分）。返回值范围为 0.0~1.0。
 
-```pygame.mixer.music.get_busy()```
+`pygame.mixer.music.get_busy()`
 
 检查是否正在播放音乐。
 
@@ -119,7 +119,7 @@ get_busy() -> bool
 
 如果有音乐流正在播放，此方法返回 True。否则返回 False。
 
-```pygame.mixer.music.set_pos()```
+`pygame.mixer.music.set_pos()`
 
 设置播放的位置。
 
@@ -134,7 +134,7 @@ set_pos(pos) -> None
 
 该函数会调用 SDL_mixer 内的 Mix_SetMusicPosition() 函数。
 
-```pygame.mixer.music.get_pos()```
+`pygame.mixer.music.get_pos()`
 
 获取播放的位置。
 
@@ -142,7 +142,7 @@ get_pos() -> time
 
 此函数会获得音乐的播放时长（以毫秒为单数的数值）。返回值仅代表已经音乐已经播放了多久，并不考虑任何起始位置偏移量。
 
-```pygame.mixer.music.queue()```
+`pygame.mixer.music.queue()`
 
 将一个音乐文件放入队列中，并排在当前播放的音乐之后。
 
@@ -158,7 +158,7 @@ pygame.mixer.music.play(5)        # Plays six times, not five!
 pygame.mixer.music.queue('mozart.ogg')
 ```
 
-```pygame.mixer.music.set_endevent()```
+`pygame.mixer.music.set_endevent()`
 
 当播放结束时发出一个事件。
 
@@ -171,7 +171,7 @@ type 参数决定了什么样的事件将被放入事件队列中。
 
 任何时候音乐结束，都会放入指定事件到队列中（不仅仅是第一次）。调用该函数并不带任何参数，表示停止投放事件到队列中。
 
-```pygame.mixer.music.get_endevent()```
+`pygame.mixer.music.get_endevent()`
 
 获取播放结束时发送的事件。
 

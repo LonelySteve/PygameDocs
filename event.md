@@ -68,7 +68,7 @@ Joysticks（游戏手柄）只有在设备初始化后才会发送事件。
 
 ### 函数详解
 
-```pygame.event.pump()```
+`pygame.event.pump()`
 
 让 Pygame 内部自动处理事件。
 
@@ -80,7 +80,7 @@ pump() -> None
 
 事件队列中的内部处理是非常重要的事情。主窗口可能需要重新绘制或对系统做出响应。如果你太长时间没有调用事件队列，系统可能会认定你的程序已锁定（假死）。
 
-```pygame.event.get()```
+`pygame.event.get()`
 
 从队列中获取事件。
 
@@ -94,7 +94,7 @@ get(typelist) -> Eventlist
 
 请注意，如果你只从队列中获取和删除指定的事件，那么久而久之，队列可能被你不关注的事件所填满。
 
-```pygame.event.poll()```
+`pygame.event.poll()`
 
 从队列中获取一个事件。
 
@@ -104,7 +104,7 @@ poll() -> EventType instance
 
 如果事件队列为空，那么会立刻返回类型为 pygame.NOEVENT 的事件。
 
-```pygame.event.wait()```
+`pygame.event.wait()`
 
 等待并从队列中获取一个事件。
 
@@ -112,7 +112,7 @@ wait() -> EventType instance
 
 从队列中返回并删除一个事件。如果队列为空，那么该函数将持续等待直至队列中有一个事件。当程序在等待时，它将保持睡眠状态。这对于希望与其他应用程序共享系统来说，是非常重要的。
 
-```pygame.event.peek()```
+`pygame.event.peek()`
 
 检测某类型事件是否在队列中。
 
@@ -124,7 +124,7 @@ peek(typelist) -> bool
 
 如果参数指定多个类型的事件，则只需队列中拥有其中的任何一个事件便返回 True。
 
-```pygame.event.clear()```
+`pygame.event.clear()`
 
 从队列中删除所有的事件。
 
@@ -136,7 +136,7 @@ clear(typelist) -> None
 
 从队列中删除所有的事件，如果通过参数指定事件的类型，则删除该类型的所有事件。该函数的效果跟 pygame.event.get() 相同，只是没有返回任何东西。当处理完关注的事件后，清空整个队列可以提高一些效率。
 
-```pygame.event.event_name()```
+`pygame.event.event_name()`
 
 通过 id 获得该事件的字符串名字。
 
@@ -144,7 +144,7 @@ event_name(type) -> string
 
 Pygame 通过整数 id 代表事件类型。如果你需要将这些类型的事件展示给用户看，那么你需要将它们转换成字符串（一堆数字谁知道你想表示啥？）。该函数将返回事件类型对应的字符串名字。返回值是以单词大写的样式（注：DanCiDaXieDe）。
 
-```pygame.event.set_blocked()```
+`pygame.event.set_blocked()`
 
 控制哪些事件禁止进入队列。
 
@@ -158,7 +158,7 @@ set_blocked(None) -> None
 
 如果传入 None，则表示允许所有的事件进入队列。
 
-```pygame.event.set_allowed()```
+`pygame.event.set_allowed()`
 
 控制哪些事件允许进入队列。
 
@@ -172,7 +172,7 @@ set_allowed(None) -> None
 
 如果传入 None，则表示禁止所有的事件进入队列。
 
-```pygame.event.get_blocked()```
+`pygame.event.get_blocked()`
 
 检测某一类型的事件是否被禁止进入队列。
 
@@ -180,7 +180,7 @@ get_blocked(type) -> bool
 
 如果参数指定类型的事件被禁止进入队列，则返回 True。
 
-```pygame.event.set_grab()```
+`pygame.event.set_grab()`
 
 控制输入设备与其他应用程序的共享。
 
@@ -190,7 +190,7 @@ set_grab(bool) -> None
 
 最好不要经常独占输入，因为这将阻止用户在操作系统上的其他操作。
 
-```pygame.event.get_grab()```
+`pygame.event.get_grab()`
 
 检测程序是否共享输入设备。
 
@@ -198,7 +198,7 @@ get_grab() -> bool
 
 当程序独占输入事件时，返回 True。使用 pygame.event.set_grab() 函数控制这一状态。
 
-```pygame.event.post()```
+`pygame.event.post()`
 
 放置一个新的事件到队列中。
 
@@ -210,7 +210,7 @@ post(Event) -> None
 
 如果 SDL 事件队列已满，将抛出 pygame.error 异常。
 
-```pygame.event.Event()```
+`pygame.event.Event()`
 
 创建一个新的事件对象。
 
@@ -229,7 +229,7 @@ pygame.event.EventType.\_\_dict\_\_  —  vent object attribute dictionary
 
 用于代表 SDL 事件的 Pygame 对象。通过 pygame.event.Event() 创建用户自定义事件。EventType 类型并不是直接可以被调用的。EventType 实例对象支持属性赋值和删除。
 
-```type```
+`type`
 
 SDL 事件类型标识符。
 
@@ -237,7 +237,7 @@ type -> int
 
 只读。预定义事件标识符是 QUIT 和 MOUSEMOTION 等。对于用于创建的事件对象，这是传递给 pygame.event.Event() 的 type 参数。
 
-```__dict__```
+`__dict__`
 
 事件对象的属性字典。
 

@@ -43,7 +43,7 @@ pygame.mouse.set_cursor(*cursor)
 
 ### 函数详解
 
-```pygame.cursors.compile()```
+`pygame.cursors.compile()`
 
 由纯字符串创建二进制光标数据。
 
@@ -83,7 +83,7 @@ thickarrow_strings = (               #sized 24x24
   "                        ")
 ```
 
-```pygame.cursors.load_xbm()```
+`pygame.cursors.load_xbm()`
 
 由一个xbm 文件载入光标数据。
 

@@ -27,7 +27,7 @@
 
 ## 函数详解
 
-```pygame.mouse.get_pressed()```
+`pygame.mouse.get_pressed()`
 
 获取鼠标按键的情况（是否被按下）。
 
@@ -41,7 +41,7 @@ get_pressed() -> (button1, button2, button3)
 
 注意3：在使用此方法前记住要先调用 pygame.event.get() 方法，否则此方法将不会工作。
 
-```pygame.mouse.get_pos()```
+`pygame.mouse.get_pos()`
 
 获取鼠标光标的位置。
 
@@ -49,7 +49,7 @@ get_pos() -> (x, y)
 
 返回鼠标光标的坐标 (x, y)。这个坐标以窗口左上角为基准点。光标位置可以被定位于窗口之外，但是通常被强制性限制在屏幕内。
 
-```pygame.mouse.get_rel()```
+`pygame.mouse.get_rel()`
 
 获取鼠标一系列的活动。
 
@@ -57,7 +57,7 @@ get_rel() -> (x, y)
 
 返回在调用此方法之前的一系列活动坐标 (x, y)。鼠标光标的相关活动被限制在屏幕范围内，但是通过虚拟输入模式可以突破这个限制。此页面的顶部有虚拟输入模式的描述。
 
-```pygame.mouse.set_pos()```
+`pygame.mouse.set_pos()`
 
 设置鼠标光标的位置。
 
@@ -65,7 +65,7 @@ set_pos([x, y]) -> None
 
 通过提供相应的参数来设置当前鼠标的位置。如果鼠标光标是可视的，则光标将会跳到新的坐标上。移动鼠标将会产生一个新的 pygame.MOUSEMOTION 事件。
 
-```pygame.mouse.set_visible()```
+`pygame.mouse.set_visible()`
 
 隐藏或显示鼠标光标。
 
@@ -73,7 +73,7 @@ set_visible(bool) -> bool
 
 如果返回的布尔值为 True，鼠标光标将会是可视的。返回光标在调用该方法之前的可视化情况。
 
-```pygame.mouse.get_focused()```
+`pygame.mouse.get_focused()`
 
 检查程序界面是否获得鼠标焦点。
 
@@ -85,7 +85,7 @@ get_focused() -> bool
 
 注意：在 MS Windows 系统中，一个窗口可以同时对鼠标和键盘事件保持监听。但是在 X-Windows 系统中，需要用一个窗口监听鼠标事件而另一个窗口监听键盘事件。pygame.mouse.get_focused() 可以表示 pygame 窗口是否在接收鼠标事件。
 
-```pygame.mouse.set_cursor()```
+`pygame.mouse.set_cursor()`
 
 设置鼠标光标在程序内的显示图像。
 
@@ -97,7 +97,7 @@ set_cursor(size, hotspot, xormasks, andmasks) -> None
 
 关于如何创建一个系统光标，请查看 pygame.cursor 模块。
 
-```pygame.mouse.get_cursor()```
+`pygame.mouse.get_cursor()`
 
 获取鼠标光标在程序内的显示图像。
 

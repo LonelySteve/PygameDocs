@@ -40,7 +40,7 @@
 
 ## 函数详解
 
-```pygame.sndarray.array()```
+`pygame.sndarray.array()`
 
 将一个音频采样复制到一个数组内。
 
@@ -50,7 +50,7 @@ array(Sound) -> array
 
 这个数组将一直保持由 pygame.mixer.get_init() 所返回的格式。
 
-```pygame.sndarray.samples()```
+`pygame.sndarray.samples()`
 
 将一个音频采样引用到一个数组内。
 
@@ -60,7 +60,7 @@ samples(Sound) -> array
 
 这个数组将一直保持由 pygame.mixer.get_init() 所返回的格式。
 
-```pygame.sndarray.make_sound()```
+`pygame.sndarray.make_sound()`
 
 将一个数组转变成一个音频对象。
 
@@ -70,7 +70,7 @@ make_sound(array) -> Sound
 
 mixer 模块必须先初始化，且数组格式必须与 mixer 音频格式相似。
 
-```pygame.sndarray.use_arraytype()```
+`pygame.sndarray.use_arraytype()`
 
 设置用于音频数组的数组系统。
 
@@ -83,7 +83,7 @@ use_arraytype (arraytype) -> None
 
 如果要求的类型不被支持，会产生一个 ValueError 的错误。
 
-```pygame.sndarray.get_arraytype()```
+`pygame.sndarray.get_arraytype()`
 
 获取当前正在使用的数组类型。
 
@@ -93,7 +93,7 @@ get_arraytype () -> str
 
 此函数返回的是 get_arraytypes() 的返回元组内的一个值，而且会表明哪种数组模块类型被用于创建该数组。
 
-```pygame.sndarray.get_arraytypes()```
+`pygame.sndarray.get_arraytypes()`
 
 获取当前正在工作的数组系统类型
 

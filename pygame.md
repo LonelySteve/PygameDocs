@@ -30,7 +30,7 @@ from pygame.locals import *
 
 ## 函数 & 属性详解
 
-```pygame.init()```
+`pygame.init()`
 
 初始化所有导入的 pygame 模块。
 
@@ -42,7 +42,7 @@ init() -> (numpass, numfail)
 
 重复调用 init() 方法是没问题的，也不会有任何负面影响。即使你已经调用了 pygame.quit() 卸载所有模块也是可以的。
 
-```pygame.quit()```
+`pygame.quit()`
 
 卸载所有导入的 pygame 模块。
 
@@ -64,7 +64,7 @@ raise pygame.error(message)
 
 它是 RuntimeError 异常的子类，用于捕获这些异常。
 
-```pygame.get_error()```
+`pygame.get_error()`
 
 得到当前错误信息。
 
@@ -74,7 +74,7 @@ get_error() -> errorstr
 
 其实你很少会使用到这个方法的啦。
 
-```pygame.set_error()```
+`pygame.set_error()`
 
 设置当前错误信息。
 
@@ -84,7 +84,7 @@ set_error(error_msg) -> None
 
 其实你很少会使用到这个方法的啦。
 
-```pygame.get_sdl_version()```
+`pygame.get_sdl_version()`
 
 获得 SDL 的版本号。
 
@@ -94,7 +94,7 @@ get_sdl_version() -> major, minor, patch
 
 Pygame 1.7.0 新添加的方法。
 
-```pygame.get_sdl_byteorder()```
+`pygame.get_sdl_byteorder()`
 
 获得 SDL 的字节顺序。
 
@@ -104,7 +104,7 @@ get_sdl_byteorder() -> int
 
 Pygame 1.8 新添加的方法。
 
-```pygame.register_quit()```
+`pygame.register_quit()`
 
 注册一个函数，这个函数将在 pygame 退出时被调用。
 
@@ -114,7 +114,7 @@ register_quit(callable) -> None
 
 一般的 pygame 用户用不到这个方法。
 
-```pygame.encode_string()```
+`pygame.encode_string()`
 
 对 unicode 或字节对象进行编码。
 
@@ -137,7 +137,7 @@ etype (exception type)：指定编码错误引发的异常类型。默认为 Uni
 
 Pygame 1.9.2 新增加的方法（主要用于单元测试）。
 
-```pygame.encode_file_path()```
+`pygame.encode_file_path()`
 
 将 unicode 或 bytes 对象编码为文件系统路径。
 

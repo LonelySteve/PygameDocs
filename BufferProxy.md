@@ -33,7 +33,7 @@ BufferProxy 实例可以直接通过 Python 代码实现，但无论是作为父
 
 ## 属性 & 方法详解
 
-```parent```
+`parent`
 
 返回被打包输出的对象。
 
@@ -42,7 +42,7 @@ parent -> \<parent>
 
 返回该 BufferProxy 的 Surface 对象，或者调用 BufferProxy 的对象。
 
-```length```
+`length`
 
 输出缓冲区的尺寸，以字节为单位。
 
@@ -50,7 +50,7 @@ length -> int
 
 导出数据的有效字节数。对于不连续（不在同一块内存中）数据来说，间隙中的字节并不在计算范围内。该属性等同于 C 的 Py_buffer 结构的 len 字段。
 
-```raw```
+`raw`
 
 一个导出缓冲区的拷贝，存储在单一的字节块中。
 
@@ -58,7 +58,7 @@ raw -> bytes
 
 将缓冲区的数据拷贝为 str 或 bytes 对象，导出数据中的任何间隙将被删除。
 
-```write()```
+`write()`
 
 写入原始字节到缓冲区对象中。
 

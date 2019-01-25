@@ -28,7 +28,7 @@
 
 ### 函数详解
 
-```pygame.draw.rect()```
+`pygame.draw.rect()`
 
 绘制矩形。
 
@@ -36,7 +36,7 @@ rect(Surface, color, Rect, width=0) -> Rect
 
 在 Surface 对象上绘制一个矩形。Rect 参数指定矩形的位置和尺寸。width 参数指定边框的宽度，如果设置为 0 则表示填充该矩形。
 
-```pygame.draw.polygon()```
+`pygame.draw.polygon()`
 
 绘制多边形。
 
@@ -46,7 +46,7 @@ polygon(Surface, color, pointlist, width=0) -> Rect
 
 绘制一个抗锯齿的多边形，只需要将 aalines() 的 closed 参数设置为 True 即可。
 
-```pygame.draw.circle()```
+`pygame.draw.circle()`
 
 根据圆心和半径绘制圆形。
 
@@ -54,7 +54,7 @@ circle(Surface, color, pos, radius, width=0) -> Rect
 
 在 Surface 对象上绘制一个圆形。pos 参数指定圆心的位置，radius 参数指定圆的半径。width 参数指定边框的宽度，如果设置为 0 则表示填充该矩形。
 
-```pygame.draw.ellipse()```
+`pygame.draw.ellipse()`
 
 根据限定矩形绘制一个椭圆形。
 
@@ -62,7 +62,7 @@ ellipse(Surface, color, Rect, width=0) -> Rect
 
 在 Surface 对象上绘制一个椭圆形。Rect 参数指定椭圆外围的限定矩形。width 参数指定边框的宽度，如果设置为 0 则表示填充该矩形。
 
-```pygame.draw.arc()```
+`pygame.draw.arc()`
 
 绘制弧线。
 
@@ -70,7 +70,7 @@ arc(Surface, color, Rect, start_angle, stop_angle, width=1) -> Rect
 
 在 Surface 对象上绘制一条弧线。Rect 参数指定弧线所在的椭圆外围的限定矩形。两个 angle 参数指定弧线的开始和结束位置。width 参数指定边框的宽度。
 
-```pygame.draw.line()```
+`pygame.draw.line()`
 
 绘制线段。
 
@@ -78,7 +78,7 @@ line(Surface, color, start_pos, end_pos, width=1) -> Rect
 
 在 Surface 对象上绘制一条线段。两端以方形结束。
 
-```pygame.draw.lines()```
+`pygame.draw.lines()`
 
 绘制多条连续的线段。
 
@@ -86,7 +86,7 @@ lines(Surface, color, closed, pointlist, width=1) -> Rect
 
 在 Surface 对象上绘制一系列连续的线段。pointlist 参数是一系列短点。如果 closed 参数设置为 True，则绘制首尾相连。
 
-```pygame.draw.aaline()```
+`pygame.draw.aaline()`
 
 绘制抗锯齿的线段。
 
@@ -94,7 +94,7 @@ aaline(Surface, color, startpos, endpos, blend=1) -> Rect
 
 在 Surface 对象上绘制一条抗锯齿的线段。blend 参数指定是否通过绘制混合背景的阴影来实现抗锯齿功能。该函数的结束位置允许使用浮点数。
 
-```pygame.draw.aalines()```
+`pygame.draw.aalines()`
 
 绘制多条连续的线段（抗锯齿）。
 

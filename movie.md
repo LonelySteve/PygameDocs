@@ -54,7 +54,7 @@ Movie(object) -> Movie
 
 #### 方法详解
 
-```pygame.movie.Movie.play()```
+`pygame.movie.Movie.play()`
 
 开始播放视频。
 
@@ -64,7 +64,7 @@ play(loops=0) -> None
 
 loops 参数控制视频将会重播多少次，如果 loops=-1，则视频将会无限重播。
 
-```pygame.movie.Movie.stop()```
+`pygame.movie.Movie.stop()`
 
 停止播放视频。
 
@@ -72,7 +72,7 @@ stop() -> None
 
 影像和音频的播放将会在他们当前的位置上结束。
 
-```pygame.movie.Movie.pause()```
+`pygame.movie.Movie.pause()`
 
 暂停/继续播放视频。
 
@@ -80,7 +80,7 @@ pause() -> None
 
 暂停/继续视频播放。
 
-```pygame.movie.Movie.skip()```
+`pygame.movie.Movie.skip()`
 
 快进视频播放的位置。
 
@@ -90,7 +90,7 @@ skip(seconds) -> None
 
 seconds 参数是一个单精度浮点数。
 
-```pygame.movie.Movie.rewind()```
+`pygame.movie.Movie.rewind()`
 
 重新播放视频。
 
@@ -100,7 +100,7 @@ rewind() -> None
 
 如果视频不能被重播，此方法会产生一个 ValueError 错误。如果重播失败，视频对象会被认为是无效的。
 
-```pygame.movie.Movie.render_frame()```
+`pygame.movie.Movie.render_frame()`
 
 设置当前视频帧数。
 
@@ -112,7 +112,7 @@ render_frame(frame_number) -> frame_number
 
 此方法会返回设置完成后的实际帧数。
 
-```pygame.movie.Movie.get_frame()```
+`pygame.movie.Movie.get_frame()`
 
 获取当前视频帧数。
 
@@ -120,7 +120,7 @@ get_frame() -> frame_number
 
 返回当前视频的整形帧数。
 
-```pygame.movie.Movie.get_time()```
+`pygame.movie.Movie.get_time()`
 
 获取当前视频的播放时间。
 
@@ -130,7 +130,7 @@ get_time() -> seconds
 
 注意：这个方法目前是坏的，会一直返回 0.0 （这是作者说的）。
 
-```pygame.movie.Movie.get_busy()```
+`pygame.movie.Movie.get_busy()`
 
 检查当前是否正在播放视频。
 
@@ -138,7 +138,7 @@ get_busy() -> bool
 
 返回一个布尔值表示视频是否正在被播放。
 
-```pygame.movie.Movie.get_length()```
+`pygame.movie.Movie.get_length()`
 
 获取视频的总时长（以秒为单位）。
 
@@ -146,7 +146,7 @@ get_length() -> seconds
 
 返回视频的总时长（以秒为单位的单精度浮点数）。
 
-```pygame.movie.Movie.get_size()```
+`pygame.movie.Movie.get_size()`
 
 获取视频的分辨率。
 
@@ -154,7 +154,7 @@ get_size() -> (width, height)
 
 视频可以适应任何 Surface 对象的规格，但是此方法返回的是视频的自然规格（即原规格，在视频制作时规定的规格）。
 
-```pygame.movie.Movie.has_video()```
+`pygame.movie.Movie.has_video()`
 
 检查视频文件里是否包含影像。
 
@@ -162,7 +162,7 @@ has_video() -> bool
 
 当视频文件里包含影像流时返回 True。
 
-```pygame.movie.Movie.has_audio()```
+`pygame.movie.Movie.has_audio()`
 
 检查视频文件里是否包含音频。
 
@@ -170,7 +170,7 @@ has_audio() -> bool
 
 当视频文件里包含音频流时返回 True。
 
-```pygame.movie.Movie.set_volume()```
+`pygame.movie.Movie.set_volume()`
 
 设置音量。
 
@@ -180,7 +180,7 @@ value 参数范围为 0.0~1.0。
 
 如果音量设置为 0，则视频的音频将不会被解码。
 
-```pygame.movie.Movie.set_display()```
+`pygame.movie.Movie.set_display()`
 
 设置视频的目标 Surface 对象。
 

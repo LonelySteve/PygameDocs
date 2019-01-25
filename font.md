@@ -30,7 +30,7 @@ Pygame 配备了内建的默认字体。通过传递 "None" 为文件名访问�
 
 ### 函数详解
 
-```pygame.font.init()```
+`pygame.font.init()`
 
 初始化字体模块。
 
@@ -42,7 +42,7 @@ init() -> None
 
 多次调用该函数是安全的。
 
-```pygame.font.quit()```
+`pygame.font.quit()`
 
 还原字体模块。
 
@@ -52,7 +52,7 @@ quit() -> None
 
 即使模块没有被初始化，调用该函数也是安全的。
 
-```pygame.font.get_init()```
+`pygame.font.get_init()`
 
 检查字体模块是否被初始化。
 
@@ -60,7 +60,7 @@ get_init() -> bool
 
 如果该字体模块已经初始化，返回 True，否则返回 False。
 
-```pygame.font.get_default_font()```
+`pygame.font.get_default_font()`
 
 获得默认字体的文件名。
 
@@ -72,7 +72,7 @@ get_default_font() -> string
 
 这个文件通常与字体模块处于同一文件目录下，但是它也可以在程序附随的独立文档中。
 
-```pygame.font.get_fonts()```
+`pygame.font.get_fonts()`
 
 获取所有可使用的字体。
 
@@ -84,7 +84,7 @@ get_fonts() -> list of strings
 
 该函数在大多数系统内是有效的，但是一些系统如果没有找到字体库会返回一个空的列表。
 
-```pygame.font.match_font()```
+`pygame.font.match_font()`
 
 在系统中搜索一种特殊的字体。
 
@@ -104,7 +104,7 @@ print pygame.font.match_font('bitstreamverasans')
 # (but only if you have Vera on your system)
 ```
 
-```pygame.font.SysFont()```
+`pygame.font.SysFont()`
 
 从系统字体库创建一个 Font 对象。
 
@@ -147,7 +147,7 @@ Font(object, size) -> Font
 
 #### 方法详解
 
-```pygame.font.Font.render()```
+`pygame.font.Font.render()`
 
 在一个新 Surface 对象上绘制文本。
 
@@ -167,7 +167,7 @@ render(text, antialias, color, background=None) -> Surface
 
 字体渲染并不是线程安全的行为：在任何时候仅有一个线程可以渲染文本。
 
-```pygame.font.Font.size()```
+`pygame.font.Font.size()`
 
 确定多大的空间用于表示文本。
 
@@ -177,7 +177,7 @@ size(text) -> (width, height)
 
 注意：大多数字体使用字距调整来调整指定字母间的宽度。例如，"ae" 的宽度并不总是等同于 'a' + 'e' 的宽度。
 
-```pygame.font.Font.set_underline()```
+`pygame.font.Font.set_underline()`
 
 控制文本是否用下划线渲染。
 
@@ -187,7 +187,7 @@ set_underline(bool) -> None
 
 该函数可以与粗体和斜体模式混合使用。
 
-```pygame.font.Font.get_underline()```
+`pygame.font.Font.get_underline()`
 
 检查文本是否绘制下划线。
 
@@ -195,7 +195,7 @@ get_underline() -> bool
 
 如果字体下划线被启用，返回 True。
 
-```pygame.font.Font.set_bold()```
+`pygame.font.Font.set_bold()`
 
 启动粗体字渲染。
 
@@ -205,7 +205,7 @@ set_bold(bool) -> None
 
 该函数可以和斜体及下划线模式混合使用。
 
-```pygame.font.Font.get_bold()```
+`pygame.font.Font.get_bold()`
 
 检查文本是否使用粗体渲染。
 
@@ -213,7 +213,7 @@ get_bold() -> bool
 
 如果字体的粗体渲染模式被启用，返回 True。
 
-```pygame.font.Font.set_italic()```
+`pygame.font.Font.set_italic()`
 
 启动斜体字渲染。
 
@@ -223,7 +223,7 @@ set_italic(bool) -> None
 
 该函数可以和粗体及下划线模式混合使用。
 
-```pygame.font.Font.metrics()```
+`pygame.font.Font.metrics()`
 
 获取字符串参数每个字符的参数。
 

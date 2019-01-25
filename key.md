@@ -185,7 +185,7 @@ key 属性的值是一个数字，为了方便使用，Pygame 将这些数字定
 
 ### 函数详解
 
-```pygame.key.get_focused()```
+`pygame.key.get_focused()`
 
 当窗口获得键盘的输入焦点时返回 True。
 
@@ -195,7 +195,7 @@ get_focused() -> bool
 
 注：注意，这样做你就无法将鼠标移出窗口客户区了，但你仍然可以通过 Ctrl - Alt - Delete 热键“解围”。
 
-```pygame.key.get_pressed()```
+`pygame.key.get_pressed()`
 
 获取键盘上所有按键的状态。
 
@@ -205,7 +205,7 @@ get_pressed() -> bools
 
 使用该函数获取一系列按钮被按下的状态，并不能正确的获取用户输入的文本。因为你无法知道用户按键的被按下的顺序，并且快速的连续按下键盘可能无法完全被捕获（在两次调用 pygame.key.get_pressed() 的过程中被忽略），也无法将这些按下的按键完全转化为字符值。实现此功能可以通过捕获 pygame.KEYDOWN 事件消息来实现。
 
-```pygame.key.get_mods()```
+`pygame.key.get_mods()`
 
 检测是否有组合键被按下。
 
@@ -215,7 +215,7 @@ get_mods() -> int
 
 注：假如 pygame.key.get_mods() 返回值存放在 mods 变量中，如果 mods & KMOD_CTRL 为 True，表示 ctrl 键正被按下。
 
-```pygame.key.set_mods()```
+`pygame.key.set_mods()`
 
 临时设置某些组合键为被按下状态。
 
@@ -225,7 +225,7 @@ set_mods(int) -> None
 
 注：比如我们需要设置 ctrl 和 alt 组合键为按下状态，则可以 mods = KMOD_CTRL | KMOD_ALT，然后调用 pygame.key.set_mods(mods)，这样尽管用户没有按下 ctrl 和 alt 组合键，它们依然是显示被按下状态。
 
-```pygame.key.set_repeat()```
+`pygame.key.set_repeat()`
 
 控制重复响应持续按下按键的时间。
 
@@ -235,7 +235,7 @@ set_repeat(delay, interval) -> None
 
 当开启重复响应按键，那么用户持续按下某一按键，就会不断产生同一 pygame.KEYDOWN 事件。delay 参数设置多久后（单位是毫秒）开始发送第一个 pygame.KEYDOWN 事件。interval 参数设置发送两个事件之间的间隔。如果不传入任何参数，表示取消重复响应按键。
 
-```pygame.key.get_repeat()```
+`pygame.key.get_repeat()`
 
 获取重复响应按键的参数。
 
@@ -247,7 +247,7 @@ get_repeat() -> (delay, interval)
 
 Pygame 1.8 新增加的。
 
-```pygame.key.name()```
+`pygame.key.name()`
 
 获取按键标识符对应的名字。
 

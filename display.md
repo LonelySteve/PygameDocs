@@ -46,7 +46,7 @@ Pygame 在任何时间内都只允许有一个显示界面。使用 pygame.displ
 
 ## 函数详解
 
-```pygame.display.init()```
+`pygame.display.init()`
 
 初始化 display 模块。
 
@@ -63,7 +63,7 @@ init() -> None
 
 多次调用该函数并没有任何问题，但也不会有什么效果。
 
-```pygame.display.quit()```
+`pygame.display.quit()`
 
 结束 display 模块。
 
@@ -73,7 +73,7 @@ quit() -> None
 
 多次调用该函数并没有任何问题，但也不会有什么效果。
 
-```pygame.display.get_init()```
+`pygame.display.get_init()`
 
 如果 display 模块已经初始化，返回 True。
 
@@ -81,7 +81,7 @@ get_init() -> bool
 
 如果 display 模块已经初始化，返回 True。
 
-```pygame.display.set_mode()```
+`pygame.display.set_mode()`
 
 初始化一个准备显示的窗口或屏幕。
 
@@ -119,7 +119,7 @@ screen_height=400
 screen=pygame.display.set_mode([screen_width, screen_height])
 ```
 
-```pygame.display.get_surface()```
+`pygame.display.get_surface()`
 
 获取当前显示的 Surface 对象。
 
@@ -127,7 +127,7 @@ get_surface() -> Surface
 
 返回当前显示的 Surface 对象。如果没有设置任何显示模式，那么返回 None。
 
-```pygame.display.flip()```
+`pygame.display.flip()`
 
 更新整个待显示的 Surface 对象到屏幕上。
 
@@ -139,7 +139,7 @@ flip() -> None
 
 注：垂直回扫是与视频显示相关的时间测量，它代表了一个帧的结束和下一帧的开始时间之间的时间间隔。
 
-```pygame.display.update()```
+`pygame.display.update()`
 
 更新部分软件界面显示。
 
@@ -153,7 +153,7 @@ update(rectangle_list) -> None
 
 该函数不能在 pygame.OPENGL 显示模式下调用，否则会抛出异常。
 
-```pygame.display.get_driver()```
+`pygame.display.get_driver()`
 
 获取 Pygame 显示后端的名字。
 
@@ -161,7 +161,7 @@ get_driver() -> name
 
 初始化的时候，Pygame 会从多个可用的显示后端中选择一个。这个函数返回显示后端内部使用的名字。可以用来提供有关显示性能加速的一些信息。可以参考 pygame.display.set_mode() 的 SDL_VIDEODRIVER 环境变量。
 
-```pygame.display.Info()```
+`pygame.display.Info()`
 
 创建有关显示界面的信息对象。
 
@@ -189,7 +189,7 @@ Info() -> VideoInfo
 |blit_sw_A|如果是 True，则表示加速软件驱动的 Surface 对象 pixel alpha 绘制|
 |current_w, current_h|1. 表示当前显示模式的宽和高（如果在 display.set_mode()前被调用，则表示当前桌面的宽和高）2. current_w, current_h 在 Pygame 1.8.0 以后，SDL 1.2.10 以后才支持 3. -1 表示错误，或者 SDL 版本太旧|
 
-```pygame.display.get_wm_info()```
+`pygame.display.get_wm_info()`
 
 获取关于当前窗口系统的信息。
 
@@ -199,7 +199,7 @@ get_wm_info() -> dict
 
 Pygame 1.7.1 新增加的。
 
-```pygame.display.list_modes()```
+`pygame.display.list_modes()`
 
 获取全屏模式下可使用的分辨率。
 
@@ -209,7 +209,7 @@ list_modes(depth=0, flags=pygame.FULLSCREEN) -> list
 
 如果颜色深度是 0，SDL 将选择当前/最合适的颜色深度显示。flags 参数默认值是 pygame.FULLSCREEN，但你可能需要添加额外的全屏模式标志。
 
-```pygame.display.mode_ok()```
+`pygame.display.mode_ok()`
 
 为显示模式选择最合适的颜色深度。
 
@@ -221,7 +221,7 @@ mode_ok(size, flags=0, depth=0) -> depth
 
 最有用的 flags 参数是 pygame.HWSURFACE，pygame.DOUBLEBUF 和 pygame.FULLSCREEN。如果这些标志不支持，那么该函数会返回 0。
 
-```pygame.display.gl_get_attribute()```
+`pygame.display.gl_get_attribute()`
 
 获取当前显示界面 OpenGL 的属性值。
 
@@ -229,7 +229,7 @@ gl_get_attribute(flag) -> value
 
 在调用设置了 pygame.OPENGL 标志的 pygame.display.set_mode() 函数之后，检查 OpenGL 的属性值不失为一个好的习惯。参考 pygame.display.gl_set_attribute() 关于合法标志的列表。
 
-```pygame.display.gl_set_attribute()```
+`pygame.display.gl_set_attribute()`
 
 设置当前显示模式的 OpenGL 属性值。
 
@@ -243,7 +243,7 @@ gl_set_attribute(flag, value) -> None
     GL_ACCUM_GREEN_SIZE,  GL_ACCUM_BLUE_SIZE, GL_ACCUM_ALPHA_SIZE,
     GL_MULTISAMPLEBUFFERS, GL_MULTISAMPLESAMPLES, GL_STEREO
 
-```pygame.display.get_active()```
+`pygame.display.get_active()`
 
 当前显示界面显示在屏幕上时返回 True。
 
@@ -251,7 +251,7 @@ get_active() -> bool
 
 pygame.display.set_mode() 函数被调用之后，Surface 对象将被显示在屏幕上。大多数窗口都支持隐藏，如果显示的 Surface 对象被隐藏和最小化，那么该函数将返回 False。
 
-```pygame.display.iconify()```
+`pygame.display.iconify()`
 
 最小化显示的 Surface 对象。
 
@@ -261,7 +261,7 @@ iconify() -> bool
 
 当显示界面最小化时，pygame.display.get_active() 返回 False。事件队列将接收到 ACTIVEEVENT 事件。
 
-```pygame.display.toggle_fullscreen()```
+`pygame.display.toggle_fullscreen()`
 
 切换全屏模式和窗口模式。
 
@@ -269,7 +269,7 @@ toggle_fullscreen() -> bool
 
 切换全屏模式和窗口模式。这个函数只在 unix x11 显示驱动下工作。在大多数情况下，建议调用 pygame.display.set_mode() 创建一个新的显示模式进行切换。
 
-```pygame.display.set_gamma()```
+`pygame.display.set_gamma()`
 
 修改硬件显示的 gama 坡道。
 
@@ -279,7 +279,7 @@ set_gamma(red, green=None, blue=None) -> bool
 
 伽马值为 1.0 创建一个线性颜色表，较低的值会使屏幕变暗，较高的值会使屏幕变量。
 
-```pygame.display.set_gamma_ramp()```
+`pygame.display.set_gamma_ramp()`
 
 自定义修改硬件显示的 gama 坡道
 
@@ -287,7 +287,7 @@ set_gamma_ramp(red, green, blue) -> bool
 
 使用自定义表设置硬件驱动显示的红色、绿色和蓝色伽马坡道。每个参数必须是 256 位整数的列表。每位整数应该在 0 和 0xffff 之间。不是所有的操作系统和硬件都支持伽马坡道。如果函数修改成功，则返回 True。
 
-```pygame.display.set_icon()```
+`pygame.display.set_icon()`
 
 修改显示窗口的图标。
 
@@ -299,7 +299,7 @@ set_icon(Surface) -> None
 
 一些操作系统不允许修改显示中的窗口图标。对于这类操作系统，该函数需要再调用 pygame.display.set_mode() 前先创建并设置图标。
 
-```pygame.display.set_caption()```
+`pygame.display.set_caption()`
 
 设置当前窗口的标题栏。
 
@@ -307,7 +307,7 @@ set_caption(title, icontitle=None) -> None
 
 如果显示窗口拥有一个标题栏，这个函数将修改窗口标题栏的文本。一些操作系统支持最小化窗口时切换标题栏，通过设置 icontitle 参数实现。
 
-```pygame.display.get_caption()```
+`pygame.display.get_caption()`
 
 获取当前窗口的标题栏。
 
@@ -315,7 +315,7 @@ get_caption() -> (title, icontitle)
 
 返回当前窗口的标题栏和最小化标题栏，通常这两个值是一样的。
 
-```pygame.display.set_palette()```
+`pygame.display.set_palette()`
 
 设置显示界面的调色板。
 

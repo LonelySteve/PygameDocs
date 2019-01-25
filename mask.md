@@ -19,7 +19,7 @@ Pygame 1.8 新增加的。
 
 ## 函数详解
 
-```pygame.mask.from_surface()```
+`pygame.mask.from_surface()`
 
 从指定 Surface 对象中返回一个 Mask。
 
@@ -33,7 +33,7 @@ Surface 对象中透明的部分设置为 1，不透明部分设置为 0。
 
 注：关于 Surface 对象的透明实现，可参考：Surface | Pygame中文文档
 
-```pygame.mask.from_threshold()```
+`pygame.mask.from_threshold()`
 
 从给定阈值的 Surface 对象中创建一个 Mask。
 
@@ -72,13 +72,13 @@ Mask((width, height)) -> Mask
 
 #### 方法详解
 
-```pygame.mask.Mask.get_size()```
+`pygame.mask.Mask.get_size()`
 
 返回 Mask 的大小。
 
 get_size() -> width,height
 
-```pygame.mask.Mask.get_at()```
+`pygame.mask.Mask.get_at()`
 
 如果像素 (x, y) 被设置，返回值是非 0。
 
@@ -86,13 +86,13 @@ get_at((x,y)) -> int
 
 跟 Surface 对象一样，(0, 0) 表示左上角坐标。
 
-```pygame.mask.Mask.set_at()```
+`pygame.mask.Mask.set_at()`
 
 设置 Mask 中给定位置的值。
 
 set_at((x,y),value) -> None
 
-```pygame.mask.Mask.overlap()```
+`pygame.mask.Mask.overlap()`
 
 返回两个 Mask 在指定偏移处的重叠坐标（如果没有返回 None）。
 
@@ -108,7 +108,7 @@ overlap(othermask, offset) -> x,y
     |  |
     :  :
 
-```pygame.mask.Mask.overlap_area()```
+`pygame.mask.Mask.overlap_area()`
 
 返回两个 Mask 重叠的像素数量。
 
@@ -121,7 +121,7 @@ dx = Mask.overlap_area(othermask,(x+1,y)) - Mask.overlap_area(othermask,(x-1,y))
 dy = Mask.overlap_area(othermask,(x,y+1)) - Mask.overlap_area(othermask,(x,y-1))
 ```
 
-```pygame.mask.Mask.overlap_mask()```
+`pygame.mask.Mask.overlap_mask()`
 
 将两个 Mask 重叠的部分创建一个新的 Mask。
 
@@ -129,7 +129,7 @@ overlap_mask(othermask, offset) -> Mask
 
 返回的 Mask 尺寸是原始 Mask 和 othermask 参数指定的 Mask 重叠部分。
 
-```pygame.mask.Mask.fill()```
+`pygame.mask.Mask.fill()`
 
 将所有的位设置为 1。
 
@@ -137,7 +137,7 @@ fill() -> None
 
 将 Mask 中所有的位设置为 1。
 
-```pygame.mask.Mask.clear()```
+`pygame.mask.Mask.clear()`
 
 将所有的位设置为 0。
 
@@ -145,7 +145,7 @@ clear() -> None
 
 将 Mask 中所有的位设置为 0。
 
-```pygame.mask.Mask.invert()```
+`pygame.mask.Mask.invert()`
 
 翻转 Mask 中所有的位（0 变 1，1 变 0）。
 
@@ -153,7 +153,7 @@ invert() -> None
 
 翻转 Mask 中所有的位（0 变 1，1 变 0）。
 
-```pygame.mask.Mask.scale()```
+`pygame.mask.Mask.scale()`
 
 缩放 Mask 的尺寸。
 
@@ -161,7 +161,7 @@ scale((x, y)) -> Mask
 
 Mask 根据指定尺寸缩放后返回一个新的 Mask。
 
-```pygame.mask.Mask.draw```
+`pygame.mask.Mask.draw`
 
 将 Mask 绘制到另一个 Mask 上边。
 
@@ -169,7 +169,7 @@ draw(othermask, offset) -> None
 
 将 Mask 绘制到另一个 Mask 上边，执行的是按位 or 操作。
 
-```pygame.mask.Mask.erase()```
+`pygame.mask.Mask.erase()`
 
 用另一个 Mask 擦除 Mask。
 
@@ -177,7 +177,7 @@ erase(othermask, offset) -> None
 
 从 Mask 上擦除 othermask 指定的像素。
 
-```pygame.mask.Mask.count()```
+`pygame.mask.Mask.count()`
 
 返回 Mask 被设置（为 1）的像素的数量。
 
@@ -185,7 +185,7 @@ count() -> pixels
 
 返回 Mask 被设置（为 1）的像素的数量。
 
-```pygame.mask.Mask.centroid()```
+`pygame.mask.Mask.centroid()`
 
 返回 Mask 的重心点。
 
@@ -193,7 +193,7 @@ centroid() -> (x, y)
 
 找到 Mask 的重心点。如果 Mask 是空的，那么返回值是 (0, 0)。
 
-```pygame.mask.Mask.angle()```
+`pygame.mask.Mask.angle()`
 
 返回像素的方向。
 
@@ -201,7 +201,7 @@ angle() -> theta
 
 找到图像中像素的大致方向（-90 度 ~ 90 度），这对于实现像素对接很有用。如果 Mask 是空的，那么返回值是 0.0。
 
-```pygame.mask.Mask.outline()```
+`pygame.mask.Mask.outline()`
 
 用列表的形式返回组成对象轮廓的点。
 
@@ -211,7 +211,7 @@ outline(every = 1) -> [(x,y), (x,y) ...]
 
 every 可选参数用于设置点的跨度，默认是每 1 个像素。
 
-```pygame.mask.Mask.convolve()```
+`pygame.mask.Mask.convolve()`
 
 返回其它 Mask 的卷积。
 
@@ -221,7 +221,7 @@ convolve(othermask, outputmask=None, offset=(0,0)) -> Mask
 
 如果 outputmask 参数被指定，那么就会在 outputmask 参数上进行绘制，outputmask 参数会被返回。否则这个 Mask 的大小是 self.get_size() + othermask.get_size() - (1, 1)。
 
-```pygame.mask.Mask.connected_component()```
+`pygame.mask.Mask.connected_component()`
 
 返回与某像素区域的连接的 Mask。
 
@@ -229,7 +229,7 @@ connected_component((x,y) = None) -> Mask
 
 它会使用 SAUF 算法进行连接需要连接的 Mask。它会连通 8 个点。默认情况下，它会返回在连接图像中最大的 Mask。可选项: 一对指定的坐标，与其相连的组件会被返回。如果像素位置没有被设置，那么返回的这个 Mask 就是空的。这个 Mask 的大小会与原始 Mask 一样。
 
-```pygame.mask.Mask.connected_components()```
+`pygame.mask.Mask.connected_components()`
 
 返回一组连接某像素区域的 Mask 的列表。
 
@@ -237,7 +237,7 @@ connected_components(min = 0) -> [Masks]
 
 返回一组连接某像素区的 Mask 的列表。min 可选参数用于对每个连接区的指定部分过滤噪点。
 
-```pygame.mask.Mask.get_bounding_rects()```
+`pygame.mask.Mask.get_bounding_rects()`
 
 返回一组像素边界矩形的列表。
 

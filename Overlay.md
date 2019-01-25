@@ -26,13 +26,13 @@ Overlay 对象使用硬件级别的“低级”访问，所以使用这个对象
 
 ## 方法详解
 
-```display()```
+`display()`
 
 设置覆盖像素。
 
-```display((y, u, v)) -> None```
+`display((y, u, v)) -> None`
 
-```display() -> None```
+`display() -> None`
 
 显示 SDL 的覆盖平面的 YUV 数据。，y、u 和 v 参数都是二进制字符串数据，需使用正确格式的数据以创建覆盖图像。
 
@@ -41,19 +41,19 @@ Overlay 对象使用硬件级别的“低级”访问，所以使用这个对象
 如果不是合法、可用的字符串数据，将导致崩溃。
 
 
-```set_location()```
+`set_location()`
 
 设置覆盖图像的显示位置。
 
-```set_location(rect) -> None```
+`set_location(rect) -> None`
 
 设置覆盖图图像的位置，覆盖的图像总是显示在原图像的上面，调用此方法并没有立即重绘图像，它将在下一次调用 display() 方法时重新绘制。
 
 
-```get_hardware()```
+`get_hardware()`
 
 测试覆盖是否支持硬件加速。
 
-```get_hardware(rect) -> int```
+`get_hardware(rect) -> int`
 
 如果支持硬件加速返回 true，若不支持则会使用软件渲染。
