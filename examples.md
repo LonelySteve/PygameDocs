@@ -69,4 +69,4 @@ python -m pygame.examles.scaletest someimage.png
 ```
 
 我们一直在寻找更多的示例和/或示例请求。这样的代码可能是开始参与python游戏编程的最佳方式。
-示例作为一个包是pygame 1.9.0的新特性。但大多数例子都是在pygame早期是就已有了。
+示例作为一个包是pygame 1.9.0的新特性。但多数示例都是在pygame早期就已经有了。
