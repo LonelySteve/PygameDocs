@@ -35,3 +35,38 @@
 - pygame.examples.camera.main——显示从一个附加的摄像机中拍摄的实时视频
 - pygame.examples.playmus.main——播放一个音频文件
 
+这些示例应该有助于你pygame的起步。以下是对你需要学习的东西的一些简要介绍。这些示例的源码是公开的。你可以在自己的项目中随意使用。
+
+有几种方式可以运行这些示例。首先，它们能作为一个独立的程序运行。其次它们可以被导入且它们的main()方法也可以被调用（见下）。最后，最简单的方式就是使用python -m选项：
+
+```shell
+python -m pygame.examples.<示例名> <示例参数>
+```
+
+示例：
+
+```shell
+python -m pygame.examles.scaletest someimage.png
+```
+
+这些示例的图像、声音等资源被存放于 pygame/examples/data 的子文件夹中。
+
+通过在python的交互模式下输入下面的命令你可以得知示例文件的存放路径。
+
+```python
+>>> import pygame.examples.scaletest
+>>> pygame.examples.scaletest.__file__
+'/usr/bin/python2.6/site-packages/pygame/examples/scaltest.py'
+```
+
+在不同的操作系统及Python版本中，存放的路径都会略有不同。例如，在Windows上，它可能存放于“C:/Python26/Lib/site-packages/pygame/examples/”路径下，而在Mac OS X上，它则可能存放于“/Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/site-packages/pygame/examples/”
+
+你还能在python的交互模式下通过调用各个包下的main()函数来运行示例。
+
+```python
+>>> import pygame.examples.scaletest
+>>> pygame.examples.scaletest.main()
+```
+
+我们一直在寻找更多的示例和/或示例请求。这样的代码可能是开始参与python游戏编程的最佳方式。
+示例作为一个包是pygame 1.9.0的新特性。但大多数例子都是在pygame早期是就已有了。
