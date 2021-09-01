@@ -50,7 +50,6 @@ Pygame的中文文档实在难找，即使是这份文档，也不全，但是�
 
 目前尚未被填坑的模块有：
 
-+ examples
 + freetype
 + math
 + midi
